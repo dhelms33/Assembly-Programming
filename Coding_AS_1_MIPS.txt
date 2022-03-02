@@ -1,0 +1,37 @@
+Dereck Helms
+CS240002V
+Coding Assignment 1
+Problem 1:
+	.data
+str: .asciiz "Hello World! This is my first MIIPS program! \n"
+	.text
+main:
+	li $v0, 4
+	la $a0, str
+	syscall
+Problem 2:
+text
+
+.data
+	li $t1, 10
+	add $t2, $t1, 1
+	add $t3, $t1, $t2
+	add $t4, $t1, 3
+	add $t5, $t4, $t3
+	add $t5, $t5, 1
+	li $v0, 1
+	syscall
+Problem 3:
+.data 
+Arr: .word 1, 2, 3, 4
+.text
+main:
+la $t1, Array
+lw $t2, 0($t1)
+lw $t3, 8($t1)
+sw $t2, 8($t1)
+sw $t3, 0($t1)
+#swap two numbers
+#use temp register to store addresses
+#address has to be product of 4
+
